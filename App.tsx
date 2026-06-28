@@ -3,7 +3,7 @@ import CodeEditor from './components/CodeEditor';
 import { CallStack, WebApis, MicrotaskQueue, MacrotaskQueue, ConsoleOutput, EventLoopIndicator } from './components/VisualizerComponents';
 import { EXAMPLES } from './constants';
 import { TimelineGenerator, Snapshot } from './engine/EventLoopEngine';
-import { Play, Pause, RotateCcw, SkipForward, SkipBack, Zap, ChevronDown, Check, Github, Linkedin, Twitter } from 'lucide-react';
+import { Play, Pause, RotateCcw, SkipForward, SkipBack, Zap, ChevronDown, Check } from 'lucide-react';
 
 const generator = new TimelineGenerator();
 
@@ -98,37 +98,7 @@ export default function App() {
                 </div>
             </div>
             
-            <div className="flex items-center gap-2 sm:gap-4">
-                <div className="flex items-center gap-1 sm:gap-2 border-r border-slate-700 pr-2 sm:pr-4">
-                    <a 
-                        href="https://github.com/0x4Nayan04" 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="p-1.5 sm:p-2 text-slate-400 hover:text-slate-200 hover:bg-slate-800 rounded-lg transition-all duration-200"
-                        title="GitHub"
-                    >
-                        <Github className="w-4 h-4 sm:w-5 sm:h-5" />
-                    </a>
-                    <a 
-                        href="https://www.linkedin.com/in/nayanswarnkar/" 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="p-1.5 sm:p-2 text-slate-400 hover:text-blue-400 hover:bg-slate-800 rounded-lg transition-all duration-200"
-                        title="LinkedIn"
-                    >
-                        <Linkedin className="w-4 h-4 sm:w-5 sm:h-5" />
-                    </a>
-                    <a 
-                        href="https://x.com/NayanSwarnkar04" 
-                        target="_blank" 
-                        rel="noopener noreferrer"
-                        className="p-1.5 sm:p-2 text-slate-400 hover:text-sky-400 hover:bg-slate-800 rounded-lg transition-all duration-200"
-                        title="Twitter/X"
-                    >
-                        <Twitter className="w-4 h-4 sm:w-5 sm:h-5" />
-                    </a>
-                </div>
-                <div className="flex items-center gap-4" ref={dropdownRef}>
+            <div className="flex items-center gap-4" ref={dropdownRef}>
                  <div className="relative">
                     <button 
                         onClick={() => setIsDropdownOpen(!isDropdownOpen)}
